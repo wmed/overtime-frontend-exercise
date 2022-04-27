@@ -1,3 +1,17 @@
+# Overtime Code Exercise Instructions
+Hi Alexandra! Congratulations on making it to the next step in the process. For this exercise please use this React boilerplate to create an application that allows a user to create and edit an inventory of books.
+
+Your application should:
+- Allow a user to add a new book to their inventory with a title, author, ISBN, and cover image.
+- Allow a user to search in their books by title.
+- If you have additional time, allow a user to update fields for an existing book.
+
+This isn’t a design exercise, but I would like to see a modern library like Bootstrap, Chakra, Tailwind, etc. implemented to make it look a little nice, and definitely follow UX best practices to make the app usable. **Data should persist across page reloads**, but you can use local storage, i.e., no need to spin up a server or use a database.
+
+If you have any questions or would like me to hop on the GitPod session with you please let me know! 
+
+Once complete, just shoot me an email and I'll pop in and take a look at the session.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

@@ -1,16 +1,6 @@
-html, body {
-  padding: 0;
-  margin: 0;
-}
-
-* {
-  position: relative;
-  box-sizing: border-box;
-}
-
-h1,h2,h3,h4,h5,h6 {
-  margin: 0;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 body {
   margin: 0;
@@ -24,4 +14,30 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+@layer components {
+  h1 {
+    @apply mb-3;
+  }
+
+  .btn-primary {
+    @apply flex-shrink-0 bg-teal-500 hover:bg-teal-700 text-base text-white py-2 px-5 rounded
+  }
+
+  .btn-cancel {
+    @apply flex-shrink-0 bg-gray-500 hover:bg-gray-700 text-base text-white py-2 px-5 rounded
+  }
+
+  .input-primary {
+    @apply text-base appearance-none border rounded border-gray-500 w-full py-2 px-3 text-gray-700 leading-tight;
+  }
+
+  .form-label {
+    @apply block text-gray-700 text-sm font-bold mb-2 uppercase;
+  }
+
+  .error-label {
+    @apply font-normal normal-case text-red-500 text-xs italic !important;
+  }
 }

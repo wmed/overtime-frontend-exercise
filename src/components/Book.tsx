@@ -1,31 +1,29 @@
-import { BooksConsumer, IBook } from "../contexts/Books";
+import React from 'react';
+import type { Book } from './Main';
+import noimage from '../no-image.png';
 
-const _Book = ({
-  book,
-  removeBook,
-}: {
-  book: IBook;
-  removeBook: (id: string) => void;
-}) => (
-  <div>
-    <div style={{ display: "flex", flexDirection: "row", gap: "0.5rem" }}>
-      <img style={{ width: "50%" }} alt="Cover" src={book.image} />
-      <div>
-        <h3>{book.title}</h3>
-        <div>{book.author}</div>
-        <div>{book.isbn}</div>
-      </div>
-    </div>
-    <button style={{ color: "red" }} onClick={() => removeBook(book.id ?? "")}>
-      Delete
-    </button>
-  </div>
-);
+interface BookProps {
+    bookObject: Book
+}
 
-const Book = ({ book }: { book: IBook }) => (
-  <BooksConsumer>
-    {({ removeBook }) => <_Book book={book} removeBook={removeBook} />}
-  </BooksConsumer>
-);
+const BookObject = ({ bookObject }: BookProps) => {
+    return (
+        <div>
+            <div className="grid grid-cols-4 gap-4 py-10 ">
+                <div className="sm:h-48 h-28 m-auto">
+                    {bookObject.coverImage ?
+                        <img className="max-h-full max-w-full" src={bookObject.coverImage} alt="Book Cover" />
+                        : <img src={noimage} alt="No Cover Uploaded" className="border border-gray-200" />
+                    }
+                </div>
+                <div className="text-left text-lg col-span-3">
+                    <h2 className="text-2xl"><i>{bookObject.title}</i></h2>
+                    <h4 className="mb-5">by <b>{bookObject.author}</b></h4>
+                    <h4>ISBN: {bookObject.isbn}</h4>
+                </div>
+            </div>
+        </div>
+    )
+}
 
-export default Book;
+export default BookObject;

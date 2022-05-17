@@ -12,7 +12,7 @@ Your application should:
 
 Some of the things we'll be looking for on the submission are:
 - Good usage of Typescript
-- Good usage of React Hooks
+- Good usage of React Hooks such as useState, useEffect and useContext
 - Safe use of Local Storage
 - Clean Architecture
 

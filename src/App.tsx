@@ -1,26 +1,15 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BookSearch } from './components/BookSearch';
+import { Bookshelf } from './components/Bookshelf';
 
-function App() {
+function OvertimeBookshelfApp() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="ot-app p-2">
+      <h1 className="text-2xl">Overtime Bookshelf</h1>
+      <BookSearch />
+      <div className="mb-2" />
+      <Bookshelf />
     </div>
   );
 }
 
-export default App;
+export default OvertimeBookshelfApp;
